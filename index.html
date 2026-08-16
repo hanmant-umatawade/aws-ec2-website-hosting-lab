@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BuildKart | Material, nearby</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <a class="logo" href="#"><span class="logo-mark">B</span> buildkart<span class="dot">.</span></a>
+    <div class="location" id="locationBtn"><span>⌖</span><div><small>DELIVERING TO</small><strong>Sector 62, Noida</strong></div><b>⌄</b></div>
+    <div class="search"><span>⌕</span><input id="searchInput" placeholder="Search cement, pipes, wires..." /></div>
+    <button class="account" id="accountBtn">Sign in <span>↗</span></button>
+    <button class="cart-btn" id="cartButton"><span>⌑</span> Cart <i id="cartCount">0</i></button>
+  </header>
+
+  <nav>
+    <button class="active" data-category="All">All materials</button>
+    <button data-category="Pipes & Plumbing">Pipes & Plumbing</button>
+    <button data-category="Electrical">Electrical</button>
+    <button data-category="Cement & Concrete">Cement & Concrete</button>
+    <button data-category="Tools">Tools</button>
+    <button data-category="Safety">Safety gear</button>
+    <span></span><a href="#stores">Find nearby stores →</a>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">MATERIAL, ON SITE. ON TIME.</p>
+        <h1>Build faster.<br><em>Source smarter.</em></h1>
+        <p class="lead">Order construction essentials from verified local suppliers — delivered directly to your project site.</p>
+        <div class="hero-actions"><button class="primary" onclick="document.querySelector('.products').scrollIntoView({behavior:'smooth'})">Shop materials <b>→</b></button><button class="link-btn" id="quoteBtn">Request bulk quote <b>↗</b></button></div>
+        <div class="stats"><div><strong>45 min</strong><span>Avg. delivery</span></div><div><strong>2,000+</strong><span>Products nearby</span></div><div><strong>4.8/5</strong><span>Contractor rated</span></div></div>
+      </div>
+      <div class="hero-visual">
+        <div class="orange-block"></div>
+        <div class="steel-lines"></div>
+        <div class="measure-card"><span>PROJECT DELIVERY</span><strong>Built for the<br>worksite.</strong><i>↗</i></div>
+        <div class="delivery-card"><div class="truck">▰</div><div><small>ARRIVING TODAY</small><strong>2 items from 1.2 km away</strong></div></div>
+      </div>
+    </section>
+
+    <section class="trust"><div>✓ <b>Verified local suppliers</b></div><div>▣ <b>GST invoices available</b></div><div>◷ <b>Same-day site delivery</b></div><div>₹ <b>Trade prices for bulk orders</b></div></section>
+
+    <section class="products">
+      <div class="section-head"><div><p class="eyebrow">READY TO DELIVER</p><h2>Materials near your site</h2></div><button class="view-all" id="viewAll">View all products →</button></div>
+      <div class="chips" id="chips"><button class="selected" data-filter="All">Popular</button><button data-filter="Pipes & Plumbing">Plumbing</button><button data-filter="Electrical">Electrical</button><button data-filter="Cement & Concrete">Structure</button><button data-filter="Tools">Tools</button></div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="store-banner" id="stores"><div><p class="eyebrow">YOUR LOCAL NETWORK</p><h2>Need something specific?</h2><p>Tell us what you need. We’ll match you with the nearest stockist and get a quote within minutes.</p><button class="primary" id="matchBtn">Find a nearby supplier <b>→</b></button></div><div class="map-card"><div class="pin p1">●</div><div class="pin p2">●</div><div class="pin p3">●</div><div class="site-pin">YOUR SITE</div><strong>12 verified stores<br><span>within 5 km of you</span></strong></div></section>
+  </main>
+
+  <aside class="cart-panel" id="cartPanel"><div class="cart-head"><h2>Your order</h2><button id="closeCart">×</button></div><div id="cartItems" class="cart-items"><p class="empty">Your material list is empty.</p></div><div class="cart-footer"><div><span>Subtotal</span><strong id="subtotal">₹0</strong></div><button class="primary checkout" id="checkoutBtn">Proceed to checkout <b>→</b></button></div></aside>
+  <div class="overlay" id="overlay"></div>
+  <div class="toast" id="toast"></div>
+  <div class="auth-modal" id="authModal"><div class="auth-box"><button class="modal-close" id="closeAuth">×</button><span class="auth-symbol">B</span><p class="eyebrow">WELCOME TO BUILDKART</p><h2 id="authTitle">Create your account</h2><p class="auth-copy" id="authCopy">Order material and track delivery.</p><div class="role-switch"><button class="role active" data-role="customer">I’m a contractor</button><button class="role" data-role="supplier">I’m a supplier</button></div><label id="nameLabel">Full name<input id="authName" placeholder="Your full name" /></label><label>Email address<input id="authEmail" type="email" placeholder="name@company.com" /></label><label>Password<input id="authPassword" type="password" placeholder="Minimum 6 characters" /></label><button class="primary auth-submit" id="authSubmit">Create account <b>→</b></button><p class="auth-toggle"><span id="toggleText">Already have an account?</span> <button id="toggleAuth">Sign in</button></p></div></div>
+  <footer><a class="logo" href="#"><span class="logo-mark">B</span> buildkart<span class="dot">.</span></a><span>Local supply. Serious progress.</span><span>© 2026 BuildKart</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
