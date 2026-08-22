@@ -7,7 +7,7 @@ This repository contains my Cloud Architecture learning project.
 2.AWS EC2 server hosting
 3.Hosting a static website on EC2
 4.Uploading and downloading files using SCP
-5.Apache web server
+5.Nginx web server
 
 ## Website
 The website source code is available in `index.html` and `style.css`.
